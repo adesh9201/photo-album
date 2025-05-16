@@ -1,99 +1,114 @@
-Photo Album Web Application
+# 📸 Photo Album Web Application
+
 A responsive web application for uploading and displaying photos in a dynamic layout. This application allows users to upload images in real-time and displays them in a paginated grid with 3 images on each side (6 images per page).
 
-Features
-Real-time Image Upload: Upload photos that appear immediately in the album
-Responsive Layout: Automatically adapts to horizontal and vertical images
-Pagination: Navigate through multiple pages of images (6 images per page)
-Input Validation: Only accepts supported image formats (.jpg, .jpeg, .png) and validates file size
-Mobile Friendly: Responsive design works on both desktop and mobile devices
-Technologies Used
-Frontend: HTML5, CSS3, JavaScript (ES6+)
-Backend: Node.js with Express
-File Handling: Multer middleware for file uploads
-Architecture: RESTful API design
-Prerequisites
-Before running this application, make sure you have the following installed:
+---
 
-Node.js (v14.0.0 or higher)
-npm (usually comes with Node.js)
-Installation
-Clone the repository (or download and extract the ZIP file):
-bash
+## ✨ Features
+
+- ✅ **Real-time Image Upload**: Upload photos that appear instantly in the album.
+- ✅ **Responsive Layout**: Automatically adjusts to horizontal and vertical images.
+- ✅ **Pagination**: Navigate through pages (6 images per page).
+- ✅ **Input Validation**: Supports `.jpg`, `.jpeg`, `.png` formats and restricts file size.
+- ✅ **Mobile Friendly**: Works seamlessly across devices.
+
+---
+
+## 🛠 Technologies Used
+
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Backend**: Node.js with Express
+- **File Handling**: Multer middleware
+- **Architecture**: RESTful API design
+
+---
+
+## ⚙️ Prerequisites
+
+Ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (v14.0.0 or higher)
+- npm (comes with Node.js)
+
+---
+
+## 🚀 Installation
+
+### Step 1: Clone the Repository
+
+```bash
 git clone https://github.com/yourusername/photo-album.git
 cd photo-album
-Install the dependencies:
-bash
+
+Step 2: Install Dependencies
 npm install
+
 This will install:
-Express: Web framework for Node.js
-Multer: Middleware for handling multipart/form-data (file uploads)
-Nodemon (dev dependency): For automatic server restarts during development
-Running the Application
+	•	express – Web server framework
+	•	multer – File upload handling middleware
+	•	start – npm run start
+
+🏃‍♂️ Running the Application
+
 Development Mode
-To run the application in development mode with automatic server restarts:
-
-bash
 npm run dev
+
 Production Mode
-To run the application in standard mode:
+npm run start
 
-bash
-npm start
-After starting the server, the application will be available at:
+	Open your browser and visit: http://localhost:8080
 
-http://localhost:3000
-How to Use
+
+📸 How to Use
+
 Uploading Images
-Open the application in your web browser at http://localhost:3000
-Click on the Choose File button in the upload section
-Select an image file from your computer (supported formats: .jpg, .jpeg, .png)
-Click the Upload Photo button
-The image will be uploaded and immediately displayed in the photo album
+	1.	Open the app at http://localhost:8080
+	2.	Click Choose File
+	3.	Select an image (.jpg, .jpeg, .png)
+	4.	Click Upload Photo
+	5.	Your image appears instantly in the album
+
 Browsing Images
-The album displays 6 images per page (3 on the left, 3 on the right)
-Use the Previous and Next buttons at the bottom to navigate through pages
-Images are sorted with the newest uploads first
-Project Structure
+	•	6 images per page (3 left, 3 right)
+	•	Use Previous and Next to navigate
+	•	Newest images are shown first
+
+📂 Project Structure
+
 photo-album/
 ├── public/
 │   ├── css/
-│   │   └── style.css          # Styling for the application
+│   │   └── style.css           # Styling
 │   ├── js/
-│   │   └── script.js          # Client-side JavaScript 
+│   │   └── script.js           # Client-side logic
 │   ├── uploads/
-│   │   └── images/            # Directory where uploaded images are stored
-│   └── index.html             # Main HTML file
-├── server.js                  # Node.js server code
-├── package.json               # Project configuration and dependencies
-└── README.md                  # This documentation file
-API Endpoints
-The application provides the following API endpoints:
+│   │   └── images/             # Uploaded images
+│   └── index.html              # Main HTML page
+├── server.js                   # Express server setup
+├── package.json                # Project metadata & dependencies
+└── README.md                   # Project documentation
 
-GET /api/images: Retrieves a list of all uploaded images
-POST /api/upload: Uploads a new image file (multipart/form-data)
-Configuration Options
-You can modify the following settings in the server.js file:
+🔌 API Endpoints
+Method	   Endpoint	        Description
+GET	     /api/images	           Retrieve all uploaded images
+POST	 /api/upload	       Upload a new image file
 
-Port: Change the port variable (default: 3000)
-File Size Limit: Modify the limits property in the multer configuration (default: 5MB)
-Allowed File Types: Update the fileFilter function to support additional image formats
-Troubleshooting
-Common Issues
-"Error: ENOENT: no such file or directory, scandir 'public/uploads/images'"
-Solution: Make sure the uploads directory exists. The application should create it automatically, but you may need to create it manually if there are permission issues.
-"Error: File too large"
-Solution: The file exceeds the size limit (5MB by default). Try uploading a smaller file or adjust the size limit in server.js.
-"Error: Only .jpeg, .jpg and .png files are allowed!"
-Solution: Upload only supported image formats (.jpg, .jpeg, .png).
-Server Not Starting
-If the server fails to start with an "EADDRINUSE" error, another process is already using port 3000. You can:
+🧰 Troubleshooting
 
-Close the other application using port 3000, or
-Change the port number in server.js to an available port
-License
-MIT License
+🖼️ Images Not Uploading
+	•	Ensure format is .jpg, .jpeg, or .png
+	•	File must be under 5MB
 
-Acknowledgments
-Icons and design inspiration from [Insert sources if applicable]
-Built with Node.js and Express
+🛑 “ENOENT: no such file or directory…”
+	•	Ensure public/uploads/images/ exists
+	•	Create it manually if needed
+
+⚠️ “EADDRINUSE” Error
+	•	Port 8080 is already in use
+	•	Kill the other process or change the port in server.js
+
+🙏 Acknowledgments
+	•	Icons and design inspiration from [https://drive.google.com/file/d/17-Ul2F7fj8XxZlYNN7vF_aokSogC6z6d/view]
+	•	Built using Node.js, Express, and Multer
+    •	Built using Node.js, Express, and Multer
+

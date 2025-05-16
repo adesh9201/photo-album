@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Album</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Photo Album</h1>
+            <p>Upload your favorite photos and browse through the collection</p>
+        </header>
+
+        <section class="upload-section">
+            <h2>Upload New Photo</h2>
+            <form id="upload-form" enctype="multipart/form-data">
+                <div class="file-input-container">
+                    <input type="file" id="image-input" name="image" accept=".jpg, .jpeg, .png">
+                    <label for="image-input" class="custom-file-upload">
+                        Choose File
+                    </label>
+                    <span id="file-name">No file chosen</span>
+                </div>
+                <button type="submit" id="upload-button">Upload Photo</button>
+            </form>
+            <div id="upload-status"></div>
+        </section>
+
+        <main class="photo-gallery">
+            <div class="gallery-container">
+                <div class="gallery-column left-column">
+                    <!-- Left column images will be loaded here -->
+                </div>
+                <div class="gallery-column right-column">
+                    <!-- Right column images will be loaded here -->
+                </div>
+            </div>
+        </main>
+
+        <div class="pagination">
+            <button id="prev-page" disabled>Previous</button>
+            <span id="page-info">Page <span id="current-page">1</span> of <span id="total-pages">1</span></span>
+            <button id="next-page" disabled>Next</button>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

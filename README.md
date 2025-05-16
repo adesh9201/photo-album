@@ -1,4 +1,5 @@
 # 📸 Photo Album Web Application
+![Alt Text](https://adesh-photo-album.onrender.com/)
 
 ![App Screenshot](https://github.com/adesh9201/photo-album/blob/main/public/uploads/photo-album.png)
 

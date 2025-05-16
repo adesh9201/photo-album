@@ -1,5 +1,7 @@
 # 📸 Photo Album Web Application
 
+![App Screenshot](public/screenshot.png)
+
 A responsive web application for uploading and displaying photos in a dynamic layout. This application allows users to upload images in real-time and displays them in a paginated grid with 3 images on each side (6 images per page).
 
 ---
